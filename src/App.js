@@ -1,6 +1,7 @@
 import React from 'react';
 import List from "./js/components/List";
 import Form from "./js/components/Form"
+import Post from "./js/components/Posts"
 
 const App = () => (
 <>
@@ -11,6 +12,10 @@ const App = () => (
   <div>
     <h2>Add a new article</h2>
     <Form />
+  </div>
+  <div>
+      <h2>API posts</h2>
+      <Post />
   </div>
 </>
 );
