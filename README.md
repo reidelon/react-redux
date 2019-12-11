@@ -1,4 +1,4 @@
-This is a simple react and redux app in order to use react with redux, first in the branch basic-redux you can see the minimal code for use of redux. Second, react is connected with redux using react-redux(see branch connect-react-redux ) and added a middleware thunk (see commit 3427946) and at the end using redux with redux-saga(see commit e2f47aa)
+This is a simple react and redux app in order to use react with redux, first in the branch basic-redux you can see the minimal code for use of redux. Second, react is connected with redux using react-redux(see branch connect-react-redux ) and added a middleware thunk (see commit 3427946) and at the end using redux with redux-saga(see commit e2f47aa). In the branch playing-with-redux was added the React temperature converter(https://reactjs.org/docs/lifting-state-up.html , https://reactjs.org/docs/lifting-state-up.html) but using redux.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
