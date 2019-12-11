@@ -1,7 +1,9 @@
-import { ADD_ARTICLE } from "../constants/action-types";
+import { ADD_ARTICLE, ADD_TEMPERATURE } from "../constants/action-types";
 
 const initialState = {
-  articles: []
+  articles: [],
+  temperature: '', 
+  scale_origin: ''
 };
 
 function rootReducer(state = initialState, action) {
@@ -9,6 +11,9 @@ function rootReducer(state = initialState, action) {
     return Object.assign({}, state, {
       articles: state.articles.concat(action.payload)
     });
+  }
+  if (action.type === ADD_TEMPERATURE) {
+    return {...state, ...action.payload};
   }
   return state;
 }
