@@ -11,7 +11,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return { scale_origin: ownProps.scale, temperature : state.temperature, scale_to_convert: state.scale };
+  return { scale_origin: ownProps.scale, temperature : state.temperature, scale_from: state.scale };
 };
 
 class ConnectedTemperatureInput extends React.Component {
@@ -37,13 +37,14 @@ class ConnectedTemperatureInput extends React.Component {
     }
   
     render() {
+      debugger;
       const temperature_converted = this.props.temperature;
-      const scale_to_convert = this.props.scale_to_convert;
+      const scale_from = this.props.scale_from;
       const scale_origin = this.props.scale_origin;
       return (
         <fieldset>
           <legend>Enter temperature in {scaleNames[scale_origin]}:</legend>
-          <input value={scale_to_convert !== scale_origin?temperature_converted: this.state.temperature} id={scale_origin}
+          <input value={scale_from !== scale_origin?temperature_converted: this.state.temperature} id={scale_origin}
                   onChange={this.handleChange} />
         </fieldset>
       );
